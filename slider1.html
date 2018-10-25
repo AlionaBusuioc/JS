@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider</title>
+</head>
+<body>
+  <div>
+    <button onclick="prev();">prev</button>
+      <img id="slide" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/6b449513765711.56277d303236b.gif">
+    <button onclick="next();">next</button>
+  </div>
+  <script>
+  // Database
+var images= [
+  "https://picsum.photos/600/400/?image=25", //0
+  "https://picsum.photos/600/400/?image=27",
+  "https://picsum.photos/600/400/?image=29"
+];
+var slide = document.getElementById('slide');
+function showSlide(){
+  slide.src = images[0];
+}
+showSlide();
+function next(){
+  images.push(images.shift());
+  showSlide();
+}
+function prev(){
+  images.unshift(images.pop());
+  showSlide();
+}
+  </script>
+</body>
+</html>
