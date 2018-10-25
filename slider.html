@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider</title>
+</head>
+<body>
+  <div>
+    <button onclick="prev();">prev</button>
+      <img id="slide" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/6b449513765711.56277d303236b.gif">
+    <button onclick="next();">next</button>
+  </div>
+  <script>
+  // Database
+var images= [
+  "https://picsum.photos/600/400/?image=25", //0
+  "https://picsum.photos/600/400/?image=27",
+  "https://picsum.photos/600/400/?image=29"
+];
+var i = 0; // index tecushevo izobrajenia
+//Logic
+function start(){
+  var current_image = images[i];
+  var slide = document.getElementById('slide');
+  slide.src = current_image;
+}
+function prev(){
+  i++;
+  if(i>=images.length-1){
+    i=0;
+  }
+  var current_image = images[i];
+  var slide = document.getElementById('slide');
+  slide.src = current_image;
+}
+start();
+function next(){
+  i++;
+  if(i>=images.length){
+    i=0;
+  }
+  var current_image = images[i];
+  var slide = document.getElementById('slide');
+  slide.src = current_image;
+}
+start();
+  </script>
+</body>
+</html>
