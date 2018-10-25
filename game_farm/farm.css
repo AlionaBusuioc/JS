@@ -1,0 +1,9 @@
+#garden{
+  border-bottom: 5px solid green;
+}
+#garden div{
+  border: 1px solid #DDD;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+}
