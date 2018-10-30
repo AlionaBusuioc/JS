@@ -1,0 +1,29 @@
+<script>
+//LEGEND
+//0 - land
+//1 - corn
+//2 -potato
+  var garden = [
+    [0,0,0,0,0],
+    [0,1,0,0,0],
+    [0,1,0,2,2],
+    [0,1,0,0,0],
+    [0,0,0,0,0]
+  ]
+  function showGarden(){
+ document.write('<table border="1">');
+ for(var r=0; r<5; r++){
+ document.write('<tr>');
+ for(var c=0; c<5; c++ ){
+ document.write('<td>');
+ if(garden[r][c] == 1){
+ document.write("corn");
+}
+ document.write('</td>');
+ }
+  document.write('</tr>');
+}
+  document.write('</table>');
+  }
+  showGarden();
+</script>
