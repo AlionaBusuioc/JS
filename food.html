@@ -1,0 +1,29 @@
+<script>
+var food = {
+  ingredients:[
+    "water",
+    "salt",
+    "pepper"
+  ], //<ol> -> <li>
+  name: "Soup",
+  calories: 38,
+  image:"https://nutritiouslife.com/wp-content/uploads/2012/03/homemade-chicken-soup-1302x904.jpg",
+  weight: 300,
+  price: {
+    amount: 50,
+    currency:"MDL"
+  },
+  show: function(){
+    document.write('<h1>'+food.name+'</h1>');
+    document.write(`<img src="${food.image}"></img>`);
+    document.write('<h1>'+food.price.amount+ " " + food.price.currency+'</h1>');
+    //document.write('<h1>'+food.ingredients+'</h1>');
+  //  document.write('<ol>'+food.ingredients+'</ol>');
+  //  document.write('<li>'+food.ingredients[0]+'</li>');
+    //document.write('<li>'+food.ingredients[1]+'</li>');
+    //document.write('<li>'+food.ingredients[2]+'</li>');
+    for (var i =0, i<food.ingredients)
+  }
+}
+food.show();
+</script>
