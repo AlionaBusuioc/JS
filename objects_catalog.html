@@ -1,0 +1,34 @@
+<script>
+//aka DATABASE! :)
+var products = [
+  {title:"Metalic Dictionary",
+   photo: "https://picsum.photos/400/300?image=500",
+   price: 1000,
+   show: function(){
+     document.write("<h3>"+ this.title +"</h3>");
+      document.write("<img src='" + this.photo +"' /> <br>");
+       document.write("<small>" +this.price + "</small>");
+   }} , //0
+   {title:"Design",
+    photo: "https://picsum.photos/400/300?image=503",
+    price: 2000,
+    show: function(){
+      document.write("<h3>"+ this.title +"</h3>");
+       document.write("<img src='" + this.photo +"' /> <br>");
+        document.write("<small>" +this.price + "</small>");
+    }},
+    {title:"Skyscripers",
+     photo: "https://picsum.photos/400/300?image=510",
+     price: 3000,
+     show: function(){
+       document.write("<h3>"+ this.title +"</h3>");
+        document.write("<img src='" + this.photo +"' /> <br>");
+         document.write("<small>" +this.price + "</small>");
+     }}
+];
+//??
+//alert(products[0].title);
+products[0].show();
+products[1].show();
+products[2].show();
+</script>
