@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //ES5 classes
+    class Car{
+      constructor(){
+        this.model="BMW";
+        this.color = "Red";
+      }
+    }
+    class SportCar extends Car{
+
+    }
+    class LuxCar extends Car{
+
+    }
+    //POLYMORFISM
+    // Create an object
+    var c = new Car();
+    var sc = new SportCar();
+    var lc = new LuxCar();
+    console.log(c, sc, lc);
+  </script>
+</body>
+</html>
