@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM lazenie</title>
+</head>
+<body>
+  <!-- This is DOM :) -->
+  <h1>Hello<small>DOM</small><b>3</b></h1>
+  <hr>
+  <h2>When working with elements remember!</h2>
+  <ul>
+    <li>.parentElement</li>
+    <li>.nextElementSibling</li>
+    <li>.previousElementSibling</li>
+    <li>.firstElementChild</li> <!--3)+ <small>yee!!!</small> -->
+    <li>.lastElementChild</li>
+    <li>.children</li>
+  </ul>
+  <script>
+    //1)
+    //var b = document.body.firstElementChild.lastElementChild;
+  //  console.log(b);
+    //b.innerHTML = "4";
+    //2) <b></b>
+    var b = document.firstElementChild.children[1].children[0].children[1];
+    console.log(b);
+    b.innerHTML = "10";
+    //3)
+    var c = document.firstElementChild.children[1].children[3].children[3];
+    console.log(c);
+    c.innerHTML += " <small>yee!!!</small>";
+  </script>
+</body>
+</html>
