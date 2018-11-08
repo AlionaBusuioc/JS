@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="switchIt()">switch it!</button>
+  <ul>
+    <li>First</li>
+    <li>Second</li>
+    <li>Third</li>
+  </ul>
+  <script>
+function switchIt(){
+  var li_first = document.body.children[1].firstElementChild;
+  var li_third = document.body.children[1].lastElementChild;
+  var t = li_third.innerHTML;
+  li_third.innerHTML = li_first.innerHTML;
+  li_first.innerHTML = t;
+  //console.log(li_first,li_third);
+  //alert()
+}
+  </script>
+</body>
+</html>
