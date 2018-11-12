@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>X</title>
+</head>
+<body>
+<table>
+    <tr>
+      <td><button onclick="left()">left</button></td>
+      <td>x</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td><button onclick="right()">right</button></td>
+    </tr>
+  </table>
+  <script>
+  var first = document.firstElementChild.children[1].children[0].children[0].children[0].children[1];
+  var second = document.firstElementChild.children[1].children[0].children[0].children[0].children[2];
+  var third = document.firstElementChild.children[1].children[0].children[0].children[0].children[3];
+  var x = "x";
+  var two = "2";
+  var one = "1";
+  function right(){
+var change = second.innerHTML;
+second.innerHTML = first.innerHTML;
+second.innerHTML = x;
+first.innerHTML = one;
+}
+function left(){
+  var back = first.innerHTML;
+  first.innerHTML = second.innerHTML;
+  first.innerHTML = x;
+second.innerHTML = two;
+}
+  //console.log(x, second);
+  </script>
+</body>
+</html>
